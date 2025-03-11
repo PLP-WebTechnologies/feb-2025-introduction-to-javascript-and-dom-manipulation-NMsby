@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Manipulation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        header {
+            background-color: #4a6fa5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .demo-box {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        button {
+            background-color: #4a6fa5;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #3a5a80;
+        }
+        
+        .highlight {
+            background-color: #ffd166;
+            color: #333;
+            padding: 3px 6px;
+            border-radius: 3px;
+        }
+        
+        .item-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .item-list li {
+            padding: 8px;
+            margin-bottom: 5px;
+            background-color: #e9ecef;
+            border-radius: 3px;
+        }
+        
+        .removed {
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript DOM Manipulation</h1>
+        <p>Learn how to dynamically interact with the Document Object Model</p>
+    </header>
+    
+    <section id="text-manipulation">
+        <h2>Text Content Manipulation</h2>
+        <p>JavaScript can change the text content of HTML elements.</p>
+        <div class="demo-box" id="text-demo">
+            <p>This text will be changed when you click the button below.</p>
+        </div>
+        <button id="change-text-btn">Change Text</button>
+        <button id="reset-text-btn">Reset Text</button>
+    </section>
+    
+    <section id="style-manipulation">
+        <h2>CSS Style Manipulation</h2>
+        <p>JavaScript can modify the CSS styles of HTML elements.</p>
+        <div class="demo-box" id="style-demo">
+            <p>This box's style will change when you click the buttons below.</p>
+        </div>
+        <button id="change-color-btn">Change Color</button>
+        <button id="change-size-btn">Change Size</button>
+        <button id="reset-style-btn">Reset Style</button>
+    </section>
+    
+    <section id="element-manipulation">
+        <h2>Element Manipulation</h2>
+        <p>JavaScript can add or remove elements from the DOM.</p>
+        <div class="demo-box">
+            <h3>My Task List</h3>
+            <ul class="item-list" id="task-list">
+                <li>Learn HTML basics</li>
+                <li>Master CSS styling</li>
+                <li>Practice JavaScript</li>
+            </ul>
+            <div class="controls">
+                <input type="text" id="new-task" placeholder="Enter a new task">
+                <button id="add-task-btn">Add Task</button>
+                <button id="remove-task-btn">Remove Last Task</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="event-handling">
+        <h2>Event Handling</h2>
+        <p>JavaScript can respond to user interactions like clicks, mouse movements, and keyboard input.</p>
+        <div class="demo-box" id="event-demo">
+            <p>Mouse over this box to see it change.</p>
+        </div>
+        <p id="click-counter">Number of times clicked: 0</p>
+        <button id="click-btn">Click Me</button>
+    </section>
+    
+    <footer>
+        <p>Created for Introduction to JavaScript and DOM Manipulation - 2025</p>
+    </footer>
+    
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
